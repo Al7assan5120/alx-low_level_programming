@@ -9,7 +9,7 @@ int main(void)
 	int lpf = 0;
 	long n = 612852475143;
 
-	for (i = 2; i <= 1000000; i++)
+	for (i = 2; i <= 100000000; i++)
 	{
 		if ((n % i) == 0)
 		{
