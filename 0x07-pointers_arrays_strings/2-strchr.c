@@ -23,6 +23,9 @@ char *_strchr(char *s, char c)
 		}
 		i++;
 	}
-	return (p);
+	if (*p == c)
+	{
+		return (p);
+	}
 	return (0);
 }
