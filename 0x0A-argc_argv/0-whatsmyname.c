@@ -1,6 +1,11 @@
 #include <stdio.h>
-
-int main (int argc, char *argv[])
+/**
+ * main - function that takes arguments after the program name
+ * @argc: argument count
+ * @argv: argument vector
+ * Return: 0
+*/
+int main(int argc, char *argv[])
 {
 	int i;
 
