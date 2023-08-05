@@ -8,7 +8,7 @@
 */
 int main(int argc, char *argv[])
 {
-	int i, j, coun = 0, x = atoi(argv[1]);
+	int coun = 0, x = atoi(argv[1]);
 
 	if (argc == 1 || argc > 2)
 	{
