@@ -7,14 +7,17 @@
  * @argv: argument vector
  * Return: 0
 */
+int coin25(int argc, char *argv[] __attribute__((unused)));
+
 int main(int argc, char *argv[])
 {
-	int i, j, coun = 0, x = atoi(argv[1]);
+	int i, j, x, coun = 0;
 
-	if (argc == 1 || argc > 2)
+	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1); }
+	x = atoi(argv[1]);
 	if (x < 0)
 	{
 		printf("%d\n", (coun));
@@ -27,10 +30,7 @@ int main(int argc, char *argv[])
 			{
 				printf("Error\n");
 				return (1); } } }
-	while (x >= 25)
-	{
-		x = x - 25;
-		coun++; }
+coun = coin25(x, argv);
 	while (x >= 10 && x < 25)
 	{
 		x = x - 10;
@@ -49,3 +49,20 @@ int main(int argc, char *argv[])
 		coun++; }
 	printf("%d\n", coun);
 return (0); }
+
+/**
+ * coin25 - function that prints the minimum number of coins.
+ * @argc: argument count
+ * @argv: argument vector
+ * Return: 0
+*/
+int coin25(int argc, char *argv[] __attribute__((unused)))
+{
+	int coun = 0;
+
+	while (argc >= 25)
+	{
+		argc = argc - 25;
+	coun++; }
+	return (coun);
+}
