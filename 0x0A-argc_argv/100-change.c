@@ -5,9 +5,11 @@
  * main - function that prints the minimum number of coins.
  * @argc: argument count
  * @argv: argument vector
+ * @p: pointer to x
+ * @c: pointer to count
  * Return: 0
 */
-int coin25(int argc, char *argv[] __attribute__((unused)));
+void coin25(int *p, int *c, int argc, char *argv[]);
 
 int main(int argc, char *argv[])
 {
@@ -30,7 +32,7 @@ int main(int argc, char *argv[])
 			{
 				printf("Error\n");
 				return (1); } } }
-coun = coin25(x, argv);
+		coin25(&x, &coun, argc, argv);
 	while (x >= 10 && x < 25)
 	{
 		x = x - 10;
@@ -54,15 +56,16 @@ return (0); }
  * coin25 - function that prints the minimum number of coins.
  * @argc: argument count
  * @argv: argument vector
- * Return: 0
+ * @p: pointer to x
+ * @c: pointer to count
+ * Return: no return
 */
-int coin25(int argc, char *argv[] __attribute__((unused)))
+void coin25(int *p, int *c, int argc, char *argv[])
 {
-	int coun = 0;
-
-	while (argc >= 25)
+	(void)argc;
+	(void)argv;
+	while (*p >= 25)
 	{
-		argc = argc - 25;
-	coun++; }
-	return (coun);
+		*p = *p - 25;
+	*c = *c + 1; }
 }
