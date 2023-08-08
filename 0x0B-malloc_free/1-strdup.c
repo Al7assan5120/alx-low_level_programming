@@ -17,7 +17,6 @@ l = strlen(str);
 	{
 		return (NULL);
 	}
-	
 	p = (char *)malloc((l + 1) * sizeof(char));
 	if (p == NULL)
 	{
