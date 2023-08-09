@@ -25,7 +25,7 @@ char *argstostr(int ac, char **av)
 			av[i] = "";
 		}
 	}
-	for (i = 1; i <= ac; i++)
+	for (i = 0; i < ac; i++)
 	{
 		l += strlen(av[i]);
 	}
@@ -35,7 +35,7 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 		/*exit(1);*/
 	}
-	for (i = 1; i < ac; i++)
+	for (i = 0; i < ac; i++)
 	{
 		for (j = 0; j < strlen(av[i]) ; j++)
 		{
