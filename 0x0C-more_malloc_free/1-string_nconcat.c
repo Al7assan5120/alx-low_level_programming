@@ -20,13 +20,13 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s2 = "";
 	l1 = strlen(s1);
 	l2 = strlen(s2);
-	if (n > l2)
+	if (n >= l2)
 		p = (char *)malloc((l1 + l2 + 1) * sizeof(char));
 	else
 		p = (char *)malloc((l1 + n + 1) * sizeof(char));
 	if (p == NULL)
 		return (NULL);
-	if (n > l2)
+	if (n >= l2)
 	{
 		for (i = 0; i < l1; i++)
 			p[i] = s1[i];
