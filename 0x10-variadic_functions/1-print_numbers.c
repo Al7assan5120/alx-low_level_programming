@@ -24,11 +24,6 @@ for (i = 0; i < n; i++)
 	if (separator != NULL)
 	{
 		printf("%s", separator);
-		printf(" ");
-	}
-	else
-	{
-		printf(" ");
 	}
 }
 printf("\n");
