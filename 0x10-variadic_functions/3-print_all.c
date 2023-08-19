@@ -33,7 +33,7 @@ void print_all(const char * const format, ...)
 			break;
 		case 's':
 			s = va_arg(args, char*);
-			printf("%s", (s == NULL) ? "(nil" : s);
+			printf("%s", (s == NULL) ? "(nil)" : s);
 			break;
 		}
 		if (i < 3 && (*p == 'c' || *p == 'i' || *p == 'f' || *p == 's'))
