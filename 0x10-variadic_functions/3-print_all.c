@@ -18,12 +18,6 @@ void print_all(const char * const format, ...)
 
 	p = format;
 	va_start(args, format);
-	/*if (*p != 'c' || *p != 'i' || *p != 'f' || *p != 's')
-	{
-		printf("\n");
-		return;
-	}*/
-	
 	while (format && *p != '\0')
 	{
 		switch (*p)
