@@ -12,26 +12,20 @@
 int print_list(const list_t *h)
 {
 	int coun = 0;
-	const list_t *ptr = NULL;
 
-	ptr = h;
-	if (ptr == NULL)
+	while (h != NULL)
 	{
-		return (1);
-	}
-	while (ptr != NULL)
-	{
-		if (ptr->str == NULL)
+		if (h->str == NULL)
 		{
 			printf("[0] (nil)\n");
 			coun++;
-			ptr = ptr->next;
+			h = h->next;
 		}
 		else
 		{
-			printf("[%d] %s\n", ptr->len, ptr->str);
+			printf("[%d] %s\n", h->len, h->str);
 			coun++;
-			ptr = ptr->next;
+			h = h->next;
 		}
 	}
 	return (coun);
