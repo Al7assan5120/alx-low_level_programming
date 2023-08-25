@@ -15,6 +15,10 @@ int print_list(const list_t *h)
 	const list_t *ptr = NULL;
 
 	ptr = h;
+	if (ptr == NULL)
+	{
+		return (1);
+	}
 	while (ptr != NULL)
 	{
 		if (ptr->str == NULL)
