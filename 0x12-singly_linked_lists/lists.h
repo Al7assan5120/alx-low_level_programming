@@ -4,9 +4,9 @@
 
 typedef struct lists
 {
-    char * str;
-    int len;
-    struct lists *next;
+	char * str;
+	int len;
+	struct lists *next;
 }list_t;
 
 
