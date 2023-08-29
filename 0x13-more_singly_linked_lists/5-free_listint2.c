@@ -10,23 +10,15 @@
 
 void free_listint2(listint_t **head)
 {
-	listint_t *ptr, *p2;
+	listint_t *ptr;
 
-if (*head == NULL)
-{
-	ptr = NULL;
-	p2 = NULL;
-}
-else
-{
+	if (head == NULL)
+		return;
 	ptr = *head;
-	p2 = *head;
 	while (ptr != NULL)
 	{
-		p2 = p2->next;
+		*head = (*head)->next;
 		free(ptr);
-		ptr = p2;
+		ptr = *head;
 	}
-	*head = p2;
-}
 }
