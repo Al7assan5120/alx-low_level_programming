@@ -16,7 +16,6 @@ if (*head == NULL)
 {
 	ptr = NULL;
 	p2 = NULL;
-	return;
 }
 else
 {
