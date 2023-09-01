@@ -9,9 +9,9 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int i = 0;
-	unsigned int x = 1;
-	unsigned int num = 0;
+	unsigned long i = 0;
+	unsigned long x = 1;
+	unsigned long num = 0;
 
 	if (!b)
 		return (0);
