@@ -15,10 +15,10 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 
 	for (i = 0; i < 64; i++)
 	{
-		if ((n & (1 << i)) != (m & (1 << i)))
+		if (((n >> i) & 1) != ((m >> i) & 1))
 		{
 			coun++;
 		}
 	}
-	return (coun * 0.5);
+	return (coun);
 }
