@@ -20,5 +20,5 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 			coun++;
 		}
 	}
-	return (coun / 2);
+	return (coun * 0.5);
 }
