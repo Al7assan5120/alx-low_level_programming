@@ -1,5 +1,5 @@
 #include "main.h"
-
+void close_f(int fd);
 /**
 *main - copies the content of a file to another file.
 *@ac: the num of argu.
@@ -28,7 +28,7 @@ int main(int ac, char **av)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
 		exit(99);
 	}
-	while (r = read(f_from, buffer, 1024) > 0)
+	while ((r = read(f_from, buffer, 1024)) > 0)
 	{
 		w = write(f_to, buffer, r);
 	}
