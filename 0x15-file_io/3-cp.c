@@ -31,17 +31,18 @@ int main(int ac, char **av)
 	while ((r = read(f_from, buffer, 1024)) > 0)
 	{
 		w = write(f_to, buffer, r);
+		if (w == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
+			exit(99);
+		}
 	}
 	if (r == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
 		exit(98);
 	}
-	if (w == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
-		exit(99);
-	}
+
 	close_f(f_from);
 	close_f(f_to);
 	return (0);
