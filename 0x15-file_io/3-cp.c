@@ -1,5 +1,4 @@
 #include "main.h"
-void close_f(int fd);
 /**
 *main - copies the content of a file to another file.
 *@ac: the num of argu.
